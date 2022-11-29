@@ -1,0 +1,4 @@
+url: https://anypoint.mulesoft.com
+muleVersion: "4.3.0"
+region: us-east-1
+http.port: "8081"

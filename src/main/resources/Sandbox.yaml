@@ -1,0 +1,10 @@
+workers: "1"
+workerType: MICRO
+http:
+  listener:
+    port: "8081"
+    
+
+connectedAppClientId: "a460858529334d24b0960622310f045e"
+connectedAppClientSecret: "817E112a31B04bB6bA9a776177148deF"
+connectedAppGrantType: "client_credentials"

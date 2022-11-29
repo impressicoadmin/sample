@@ -7,9 +7,11 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="e73abf91-cdd2-49ef-bc82-013f4031d8e9" >
 		<http:listener-connection host="0.0.0.0" port="8081" />
 	</http:listener-config>
+	<configuration-properties doc:name="Configuration properties" doc:id="b38b7158-4865-489e-b00b-4234453738d2" file="common.yaml" />
+	<configuration-properties doc:name="Configuration properties" doc:id="d5fe6813-3b1a-4589-a427-9322d264e183" file="${env}.yaml" />
 	<flow name="sampleFlow" doc:id="02bc8732-67ea-4132-9644-00f18902c69e" >
 		<http:listener doc:name="Listener" doc:id="23c9f2ae-ec70-4740-bdca-b098410549c9" path="/test" config-ref="HTTP_Listener_config"/>
-		<set-payload value='#["Hello world thanks for calling this API"]' doc:name="Set Payload" doc:id="5420145d-1bce-4961-be26-5899e5a7c86e" />
+		<set-payload value="#[&quot;Hello world thanks for calling this API &quot; ++ p('env')]" doc:name="Set Payload" doc:id="5420145d-1bce-4961-be26-5899e5a7c86e" />
 		<logger level="INFO" doc:name="Logger" doc:id="330d8990-8090-4d22-bd9d-0d059949e4f1" message="#[payload]"/>
 	</flow>
 </mule>
