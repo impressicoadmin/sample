@@ -4,7 +4,7 @@
 
 	<groupId>com.jenkins.deploy</groupId>
 	<artifactId>sample</artifactId>
-	<version>3.7.1</version>
+	<version>4.4.0</version>
 	<packaging>mule-application</packaging>
 
 	<name>sample</name>
