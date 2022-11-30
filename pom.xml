@@ -4,7 +4,7 @@
 
 	<groupId>com.jenkins.deploy</groupId>
 	<artifactId>sample</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.15</version>
 	<packaging>mule-application</packaging>
 
 	<name>sample</name>
@@ -33,7 +33,7 @@
 					<cloudHubDeployment>
 						<uri>${url}</uri>
 						<muleVersion>${app.runtime}</muleVersion>
-						<applicationName>${project.artifactId}-${env}</applicationName>
+						<applicationName>${project.artifactId}-${env}-impressico</applicationName>
 						<environment>${env}</environment>
 						<region>${region}</region>
 						<workers>${workers}</workers>
